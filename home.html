@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good for People - Creating Positive Impact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        :root {
+            --primary-green: #4CAF50;
+            --action-orange: #FF7F50;
+        }
+
+        .team-card:hover img {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .hidden {
+            display: none;
+        }
+
+        .gallery-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+        }
+        @media (max-width: 768px){
+            .gallery-section{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-[#4CAF50] shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home">
+                    <img src="https://i.ibb.co/kV7YWpNL/logo-large.jpg" alt="Logo" class="h-16 w-16 rounded-full">
+                </a>
+                <nav>
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="text-white hover:text-green-100 transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-white hover:text-green-100 transition-colors">About</a></li>
+                        <li><a href="#services" class="text-white hover:text-green-100 transition-colors">Services</a></li>
+                        <li><a href="#gallery" class="text-white hover:text-green-100 transition-colors">Gallery</a></li>
+                        <li><a href="#inquiry" class="text-white hover:text-green-100 transition-colors">Inquiry</a></li>
+                        <li><a href="#contact" class="text-white hover:text-green-100 transition-colors">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative h-[600px] bg-cover bg-center" style="background-image: url(https://i.ibb.co/5WPHM4Qc/logo-large.webp);">
+        <div class="absolute inset-0 bg-black/50 flex items-center">
+            <div class="max-w-4xl mx-auto text-center text-white px-4">
+                <h1 class="text-5xl font-bold mb-6">Welcome to Good for People</h1>
+                <p class="text-xl mb-8">Your mission to create positive impact begins here. Together, we can make a difference!</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="impact-card bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Meals Distributed</h3>
+                        <p class="text-4xl font-bold" id="mealCounter">0</p>
+                    </div>
+                    <div class="impact-card bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Volunteers</h3>
+                        <p class="text-4xl font-bold" id="volunteerCounter">0</p>
+                    </div>
+                    <div class="impact-card bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Communities</h3>
+                        <p class="text-4xl font-bold" id="communityCounter">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
