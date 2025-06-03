@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good for People - Creating Positive Impact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-green: #4CAF50;
+            --action-orange: #FF7F50;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-[#4CAF50] shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html">
+                    <img src="https://i.ibb.co/kV7YWpNL/logo-large.jpg" alt="Logo" class="h-16 w-16 rounded-full">
+                </a>
+                <nav>
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="text-white hover:text-green-100 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-white hover:text-green-100 transition-colors">About</a></li>
+                        <li><a href="services.html" class="text-white hover:text-green-100 transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="text-white hover:text-green-100 transition-colors">Gallery</a></li>
+                        <li><a href="inquiry.html" class="text-white hover:text-green-100 transition-colors">Inquiry</a></li>
+                        <li><a href="contact.html" class="text-white hover:text-green-100 transition-colors">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative h-[600px] bg-[url('https://i.ibb.co/m53dKDyj/istockphoto-927720230-612x612.jpg')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/50 flex items-center">
+            <div class="max-w-4xl mx-auto text-center text-white px-4">
+                <h1 class="text-5xl font-bold mb-6">Welcome to Good for People</h1>
+                <p class="text-xl mb-8">Your mission to create positive impact begins here. Together, we can make a difference!</p>
+
+                <div class="grid grid-cols-3 gap-8 mt-12">
+                    <div class="impact-card bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Meals Distributed</h3>
+                        <p class="text-4xl font-bold" id="mealCounter">0</p>
+                    </div>
+                    <div class="impact-card bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Volunteers</h3>
+                        <p class="text-4xl font-bold" id="volunteerCounter">0</p>
+                    </div>
+                    <div class="impact-card bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-2">Communities</h3>
+                        <p class="text-4xl font-bold" id="communityCounter">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Counter Animation
+        function animateCounter(target, finalValue, duration = 2000) {
+            let start = 0;
+            const increment = finalValue / (duration / 10);
+            const timer = setInterval(() => {
+                start += increment;
+                target.textContent = Math.round(start);
+                if(start >= finalValue) clearInterval(timer);
+            }, 10);
+        }
+
+        window.addEventListener('load', () => {
+            animateCounter(document.getElementById('mealCounter'), 1254300);
+            animateCounter(document.getElementById('volunteerCounter'), 2350);
+            animateCounter(document.getElementById('communityCounter'), 86);
+        });
+    </script>
+</body>
+</html>
